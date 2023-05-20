@@ -19,6 +19,28 @@ let cantidad = 0;
 function generarInvitados(){
     cantidad = parseInt(prompt("Ingrese la cantidad de personas que desea invitar (hasta 3)"));
     if(cantidad === 1) {
+        return alert(`Su invitado es: ${prompt("Ingrese el nombre de su invitado")}`);
+    } else if (cantidad === 2) {
+        return alert(`Sus invitados son: ${prompt("Ingrese el nombre del primer invitado")} y ${prompt("Ingrese el nombre de su segundo invitado")}`);
+    } else if (cantidad ===3) {
+        return alert(`Sus invitados son: ${prompt("Ingrese el nombre del primer invitado")}, ${prompt("Ingrese el nombre de su segundo invitado")} y ${prompt("Ingrese el nombre de su tercer invitado")}`);
+    } else if (cantidad===0) {
+        alert("Ninguna persona invitada");
+    } else {
+        alert("Está fuera de la cantidad de invitaciones permitidas");
+    }
+}
+
+generarInvitados()
+
+
+
+/* Primer paso:
+
+let cantidad = 0;
+function generarInvitados(){
+    cantidad = parseInt(prompt("Ingrese la cantidad de personas que desea invitar (hasta 3)"));
+    if(cantidad === 1) {
         prompt("Ingrese el nombre de su invitado");
     } else if (cantidad === 2) {
         prompt("Ingrese el nombre del primer invitado")+(prompt("Ingrese el nombre de su segundo invitado"));
@@ -29,7 +51,7 @@ function generarInvitados(){
     } else {
         alert("Está fuera del rango permitido");
     }
-
 }
-
 generarInvitados()
+
+*/
