@@ -20,15 +20,27 @@ tres invitados.
 IMPORTANTE: Utilizar un "prompt" por cada invitado
 que se solicite ingresar
 
-Los tres nombres ingresados se deberán concatener en una sola variable
+Los tres nombres ingresados se deberán concatenar en una sola variable
 tipo texto
 
 La función deberá retornar esta variable con los invitados concatenados
-para que luego el sistema use esa variable "invidatos" para imprimir
+para que luego el sistema use esa variable "invitados" para imprimir
 en consola la lista
 
 */
 
 // Definir y crear la función antes de esta llamada
-invitados = generarInvitados();
+
+let invitado1 = "";
+let invitado2 = "";
+let invitado3 = "";
+
+function generarInvitados() {
+    invitado1 = prompt("Ingrese el nombre de un invitado");
+    invitado2 = prompt("Ingrese el nombre de otro invitado");
+    invitado3 = prompt("Ingrese el nombre de otro invitado");
+    return (`${invitado1}, ${invitado2} y ${invitado3}`);
+}
+
+let invitados = generarInvitados();
 console.log(`Mis invitados: ${invitados}`)
