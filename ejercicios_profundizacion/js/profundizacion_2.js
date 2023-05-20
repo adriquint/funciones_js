@@ -15,29 +15,21 @@
 */
 
 let cantidad = 0;
-let invitado1 = "";
-let invitado2 = "";
-let invitado3 = "";
-
 
 function generarInvitados(){
-    if(cantidad = 1) {
-        invitado1 = prompt("Ingrese el nombre de su invitado");
-        alert(`Su invitado es ${invitado1}`)
-        return invitado1;       
-    } else if (cantidad=2) {
-        invitado1 = prompt("Ingrese el nombre de un invitado");
-        invitado2 = prompt("Ingrese el nombre del segundo invitado");
-        return `${invitado1} y ${invitado2}`;
-    } else if (cantidad=3) {
-        let invitado1 = prompt("Ingrese el nombre de un invitado");
-        let invitado2 = prompt("Ingrese el nombre del segundo invitado");
-        let invitado3 = prompt("Ingrese el nombre del tercer invitado");
-        return `${invitado1}, ${invitado2} y ${invitado3}`;
-    }        
+    cantidad = parseInt(prompt("Ingrese la cantidad de personas que desea invitar (hasta 3)"));
+    if(cantidad === 1) {
+        prompt("Ingrese el nombre de su invitado");
+    } else if (cantidad === 2) {
+        prompt("Ingrese el nombre del primer invitado")+(prompt("Ingrese el nombre de su segundo invitado"));
+    } else if (cantidad ===3) {
+        prompt("Ingrese el nombre del primer invitado")+(prompt("Ingrese el nombre de su segundo invitado"))+(prompt("Ingrese el nombre de su tercer invitado"));
+    } else if (cantidad===0) {
+        alert("Ninguna persona invitada");
+    } else {
+        alert("Está fuera del rango permitido");
+    }
+
 }
 
-parseInt(prompt(`Ingrese la cantidad de invitados (1, 2 o 3):`));
-
-let invitados = generarInvitados();
-alert(`Sus invitados son: ${invitados}`)
+generarInvitados()
